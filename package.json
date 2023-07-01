@@ -4,12 +4,7 @@
   "description": "this project is used for book Events and Shows. ",
   "main": "index.js",
     "scripts": {
-    "ng": "ng",
     "start": "env-cmd ./server/config/dev.env node app.js",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
   },
   "keywords": [
     "book",
