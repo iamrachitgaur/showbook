@@ -1,0 +1,18 @@
+.seat-heading{
+    font-size: 15px;
+    color: var(--theme-dark-grey);
+}
+.d-grid{
+    grid-template-columns: repeat(auto-fill,25px);
+    grid-gap: 2px;
+}
+
+.seatNumber{
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
