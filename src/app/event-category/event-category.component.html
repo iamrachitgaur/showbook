@@ -1,0 +1,22 @@
+<div class="p-2 heading text-capitalize">{{myCategory.category}} Event</div>
+
+<div class="grid">
+    <div  *ngFor="let event of allEvent">
+        <div class="p-2" >
+            <div class="card" (click)="selectCard(event)">
+                <img src="../../assets/images/{{event.imageName}}.png" class="card-img-top rounded" alt="...">
+                <div class="card-body">
+                  <p class="m-0 card-title text-center text-truncate">{{event.eventName}}</p>  
+                      <div class="text-center text-truncate">
+                        <span class=" card-title-body" *ngFor="let artist of event.artists">  
+                        {{artist}}
+                        </span>
+                    </div>
+                 
+                </div>
+              </div>
+        </div>
+    </div>
+
+</div>
+<div class="py-5"></div>

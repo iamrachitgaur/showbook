@@ -1,0 +1,29 @@
+
+.navbar-toggler{
+    border: none;
+    box-shadow: none;
+}
+.btn-close{box-shadow: none;}
+
+.navbar-brand{
+    padding: 4px;
+}
+
+.nav-link{
+    color: var(--theme-black) !important;
+}
+
+.active{
+    color: var(--theme-voilet) !important;
+}
+
+.location{
+    color: var(--theme-voilet);
+    font-size: 12px;
+}
+
+@media screen and (max-width:500px) {
+    .offcanvas{
+        width: 100%;
+    }    
+}

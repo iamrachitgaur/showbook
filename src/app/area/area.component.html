@@ -1,0 +1,56 @@
+<div class="bg-image">
+    <div class="container">
+        <div class="py-5">
+            <div class="card card-main box-shadow">
+                <div class="card-body">
+                    <div class="p-2">
+                        <div class="fs-3">Pick up your state</div>
+                    </div>
+                    <div class="p-2 text-center fw-bold">Popular States</div>
+
+                    <div class="p-2">
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <div class="px-2 py-1" *ngFor="let state of stateArray">
+                            <div class="card card-state" (click)="selectedState(state)">
+                                <div class="card-body">
+                                    {{state.state}}
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <div class="py-5">
+        <div class="card card-main box-shadow">
+            <div class="card-body">
+                <div class="m-2">
+            
+                    <div class="p-2 coordsLocation" (click)="getMyLocation()">
+                        <i class="bi bi-geo-alt-fill"></i> Detect my Location
+                    </div>
+                    
+                    </div>
+                    <div class="h5 text-center">Popular States</div>
+                    <div class="p-2">
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <div class="p-2" *ngFor="let state of stateArray">
+                            <div class="card card-state" (click)="selectedState(state)">
+                                <div class="card-body">
+                                    {{state}}
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+</div> -->

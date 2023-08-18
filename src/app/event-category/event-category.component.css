@@ -1,0 +1,40 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,12rem);
+    justify-content: space-around;
+}
+
+.card{
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+
+.card-title{
+    color:var(--theme-black);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+.card-title-body{
+    color:var(--theme-dark-grey);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+
+@media screen and (max-width:700px) {
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,10rem);
+        justify-content: space-around;
+    } 
+}
+
+@media screen and (max-width:500px) {
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,8rem);
+        justify-content: space-around;
+    } 
+}

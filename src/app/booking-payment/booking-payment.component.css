@@ -1,0 +1,17 @@
+.verify-icon{
+    font-size: 100px;
+    color: var(--theme-voilet);
+}
+.currency-icon{
+    font-size: 32px;
+}
+
+.payment-prize{
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--theme-voilet);
+}
+
+.btn-payment{
+    width: 200px;
+}

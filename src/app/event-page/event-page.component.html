@@ -1,0 +1,33 @@
+<section>
+  <div class="container">
+    <div class="py-3">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="text-center">
+                <img style="width:200px;" src="../../assets/images/{{selectedEvent.imageName}}.png" alt="..."/>
+              </div>
+            </div>
+            <div class="col">
+              <div class="p-2 event-detail text-center text-md-start">
+                <h5>{{selectedEvent.eventName}}</h5>
+                <p>{{selectedEvent.state}}</p>
+                <p>{{selectedEvent.address}}</p>
+                <h6>Description</h6>
+                <p>{{selectedEvent.description}}</p>
+              </div>
+            </div>
+          </div>
+    </div>
+<div class="heading">Choose your event slot</div>
+    <div class="py-3"  *ngFor="let event of selectedEvent.eventDateTime">
+      <div class="card" (click)="selectedEventSlot(event,selectedEvent)">
+        <div class="card-body">
+            {{event | date:'short'}}  
+        </div>
+      </div>
+    </div>
+
+    <div class="py-5"></div>
+
+  </div>
+</section>

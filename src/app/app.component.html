@@ -1,0 +1,9 @@
+<div class="d-none d-sm-block sticky-top" *ngIf="authenticated">
+    <app-header></app-header>    
+</div>
+
+<router-outlet></router-outlet>
+
+<div class="d-sm-none" *ngIf="authenticated">
+    <app-footer></app-footer>
+</div>

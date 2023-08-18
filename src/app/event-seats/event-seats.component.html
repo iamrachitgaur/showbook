@@ -1,0 +1,120 @@
+<div class="p-3 text-white bg-secondary">
+    {{eventDateSeat.eventDetail.eventName}}
+</div>
+
+<div class="container">
+    <div class="p-2 heading">Choose Your Seats</div>
+   
+    <div class="mx-auto" style="max-width: 600px;">
+        <div class="d-flex justify-content-center">
+            <img src="../../assets/web-image/screen.svg"/>
+        </div> 
+        <div class="table-responsive">
+            <table class="table table-borderless">
+                <tbody>
+                <tr>
+                    <td colspan="100%"><div class="seat-heading">VIP - {{vipSeatPrize}}</div><hr></td>
+                </tr>
+                <tr>
+                    <div class="p-0" *ngFor="let row of vip;let i = index">
+                    <td>
+                        <div class="row-alphabet">
+                            {{rowAlphabetArray[i]}}
+                        </div>
+                    </td>
+                    <td>
+        
+                            <div class="d-flex">
+                                <div *ngFor="let seat of row.seat">
+                                    <div class="m-1 seat" (click)="selectedSeat(seat,selectedSeatElement)" [ngClass]="{'hide': seat.seatStatus === 'hide', 'available': seat.seatStatus === 'available', 'occupied': seat.seatStatus === 'occupied'}" #selectedSeatElement>{{seat.seatNumber}}</div>
+                                </div>
+                            </div>
+                        
+                    </td>
+                </div>
+                </tr>
+        
+                <tr>
+                    <td colspan="100%"><div class="seat-heading">Platinum - {{platinumSeatPrize}}</div><hr></td>
+                </tr>
+                <tr>
+                    <div class="p-0" *ngFor="let row of platinum;let i = index">
+                    <td>
+                        <div class="row-alphabet">
+                            {{rowAlphabetArray[i]}}
+                        </div>
+                    </td>
+                    <td>
+        
+                            <div class="d-flex">
+                                <div *ngFor="let seat of row.seat">
+                                    <div class="m-1 seat" (click)="selectedSeat(seat,selectedSeatElement)" [ngClass]="{'hide': seat.seatStatus === 'hide', 'available': seat.seatStatus === 'available', 'occupied': seat.seatStatus === 'occupied'}" #selectedSeatElement>{{seat.seatNumber}}</div>
+                                </div>
+                            </div>
+                        
+                    </td>
+                </div>
+                </tr>
+        
+                <tr>
+                    <td colspan="100%"><div class="seat-heading">Gold - {{goldSeatPrize}}</div><hr></td>
+                </tr>
+                <tr>
+                    <div class="p-0" *ngFor="let row of gold;let i = index">
+                    <td>
+                        <div class="row-alphabet">
+                            {{rowAlphabetArray[i]}}
+                        </div>
+                    </td>
+                    <td>
+        
+                            <div class="d-flex">
+                                <div *ngFor="let seat of row.seat">
+                                    <div class="m-1 seat" (click)="selectedSeat(seat,selectedSeatElement)" [ngClass]="{'hide': seat.seatStatus === 'hide', 'available': seat.seatStatus === 'available', 'occupied': seat.seatStatus === 'occupied'}" #selectedSeatElement>{{seat.seatNumber}}</div>
+                                </div>
+                            </div>
+                        
+                    </td>
+                </div>
+                </tr>
+        
+                <tr>
+                    <td colspan="100%"><div class="seat-heading">Silver - {{silverSeatPrize}}</div><hr></td>
+                </tr>
+                <tr>
+                    <div class="p-0" *ngFor="let row of silver;let i = index">
+                    <td>
+                        <div class="row-alphabet">
+                            {{rowAlphabetArray[i]}}
+                        </div>
+                    </td>
+                    <td>
+        
+                            <div class="d-flex">
+                                <div *ngFor="let seat of row.seat">
+                                    <div class="m-1 seat" (click)="selectedSeat(seat,selectedSeatElement)" [ngClass]="{'hide': seat.seatStatus === 'hide', 'available': seat.seatStatus === 'available', 'occupied': seat.seatStatus === 'occupied'}" #selectedSeatElement>{{seat.seatNumber}}</div>
+                                </div>
+                            </div>
+                        
+                    </td>
+                </div>
+                </tr>
+        
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<div class="py-5"></div>
+
+<nav class="p-0 navbar bgcolor-white footer-box-shadow fixed-bottom" *ngIf="selectedSeatArray.length > 0">
+    <div class="w-100 d-flex justify-content-center">
+            <div class="p-3">
+            <button type="button" class="px-5 btn btn-sm btn-pay button" (click)="seatPayment()">Pay Rs.{{totalPrize}}.00</button>
+            </div>    
+    </div>
+</nav>
+
+

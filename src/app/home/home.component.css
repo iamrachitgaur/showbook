@@ -1,0 +1,92 @@
+.z-index-1{
+    z-index: 1;
+}
+.bg-emoji{
+    width:30px;
+    height: 30px;
+    background-image: url('../../assets/web-image/waving-emoji.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.view-all-link{
+    color: var(--theme-voilet);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.scroll-design::-webkit-scrollbar{
+    height: 6px;
+}
+.scroll-design::-webkit-scrollbar-thumb {
+    background-color: var(--theme-voilet);
+    border-radius: 5px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,12rem);
+    justify-content: space-around;
+}
+
+.card{
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.placeholder-img{
+    height: 9.98rem;
+}
+
+.card-categories{
+    background-image: url('../../assets/web-image/card-bg.svg');
+    background-size: cover;
+    color: var(--theme-default-white);
+    font-weight: bold;
+    width: 11rem;
+    text-align: center;
+}
+
+.card-title{
+    color:var(--theme-black);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+.card-title-body{
+    color:var(--theme-dark-grey);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+@media screen and (max-width:700px) {
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,10rem);
+        justify-content: space-around;
+    } 
+    .card-categories{
+        width: 10rem;
+    }
+    .placeholder-img{
+        height: 7.98rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,8rem);
+        justify-content: space-around;
+    } 
+    .card-categories{
+        width: 8rem;
+        font-size: 12px;
+    }
+    
+.scroll-design::-webkit-scrollbar{
+    height: 0px;
+}
+    .placeholder-img{
+        height: 6.58rem;
+    }
+}

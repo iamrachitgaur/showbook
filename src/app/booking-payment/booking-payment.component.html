@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="my-5">
+
+        <div class="d-flex justify-content-center" *ngIf="display == 0">
+            <div style="width: 500px;">
+                <div class="p-2">
+                    <div class="heading">Payment</div>
+                </div>
+                <div class="p-2">
+                    <form [formGroup]="paymentForm" (ngSubmit)="paymentDone()" autocomplete="off">
+                    
+                    <div class="mb-3">
+                        <label for="payCardHolder" class="form-label">Card Holder 's Name</label>
+                        <input type="text" class="form-control form-control-sm" id="payCardHolder" formControlName="cardHolder"/>
+                      </div>
+                    <div class="mb-3">
+                        <label for="payCardNumber" class="form-label">Card Number</label>
+                        <input type="number" class="form-control form-control-sm" id="payCardNumber" formControlName="cardNumber"/>
+                      </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="payExpire" class="form-label">Expiration</label>
+                                <input type="date" class="form-control form-control-sm" id="payExpire" formControlName="expiration"/>
+                              </div>    
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="payCVC" class="form-label">CVC</label>
+                                <input type="number" class="form-control form-control-sm" id="payCVC" formControlName="cvc"/>
+                            </div>
+                            
+                        </div>
+                                            
+                    </div>
+                    <nav class="p-0 navbar bgcolor-white footer-box-shadow fixed-bottom">
+                        <div class="w-100 d-flex justify-content-center">
+                                <div class="p-3">
+                                    <button type="submit" class="btn btn-sm btn-payment button" [disabled]="!paymentForm.valid">Pay Rs.{{seatPayment.totalPrize}}</button>
+                                </div>    
+                        </div>
+                    </nav>
+                                
+                </form>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="display == 1">
+            <div class="d-flex justify-content-center">
+                <div style="width: 500px;">
+                    <div class="p-2 text-center verify-icon">
+                        <i class="bi bi-patch-check-fill"></i>
+                    </div>
+                    <div class="text-center">
+                        <div class="d-flex justify-content-center">
+                        <div class="currency-icon">
+                            <i class="bi bi-currency-rupee"></i>
+                        </div>
+                        <div class="payment-prize">
+                            {{seatPayment.totalPrize}}
+                        </div>
+                        </div>
+                        <div class="heading">Payment Done</div>
+                        <hr>
+                        <div class="h4">Rachit Gaur</div>
+                        <div class="h4">1234XXX8</div>
+                        <div class="py-2">
+                            <button type="button" class="btn btn-sm button">Go Home</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

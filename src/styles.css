@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --theme-voilet:#7b2cbf;
+    --theme-black:#212529;
+    --theme-dark-grey:#adb5bd;
+    --theme-white:#d9d9d994;
+    --theme-mid-white:#edf2f4;
+    --theme-default-white:#ffffff;
+    --theme-grey:#e5e5e5;
+    --theme-green:#38b000;
+}
+
+.bgcolor-white{
+    background-color: var(--theme-mid-white) !important;
+}
+
+.heading{
+    color:var(--theme-black);
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+.sub-heading{
+    color:var(--theme-dark-grey);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+
+.box-shadow{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.header-box-shadow{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1.95px 2.6px;
+}
+.footer-box-shadow{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px -1.95px 2.6px;
+}
+.button{
+    color: var(--theme-default-white) !important;
+    background-color: var(--theme-voilet) !important;
+}

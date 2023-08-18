@@ -1,0 +1,4 @@
+.card{
+    color: var(--theme-voilet);
+    border: 2px solid var(--theme-voilet);
+}

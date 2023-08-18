@@ -1,0 +1,32 @@
+.bg-image{
+    background-image: url('../../assets/web-image/image_processing20210610-12987-1drnbcd.png');
+    background-size: cover;
+    height: 100vh;
+}
+.card-main{
+    border: none;
+    border-radius: 20px;   
+    background-color: rgba(233, 233, 233, 0.85);
+}
+.card-state{
+    width: 10rem;
+    border: none;
+    background-image: url('../../assets/web-image/card-bg.svg');
+    background-size: cover;
+    color: var(--theme-default-white);
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.coordsLocation{
+    color: var(--theme-voilet);
+    cursor: pointer;
+}
+/* .card{
+    width: 8rem;
+    height: 8rem;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */

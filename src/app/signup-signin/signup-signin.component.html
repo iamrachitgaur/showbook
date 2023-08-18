@@ -1,0 +1,65 @@
+
+<div class="container">
+  <div class="py-5">
+    <div class="d-flex justify-content-center">
+      <div class="form-width">
+        
+        
+        <div class="text-center py-4">
+          <a class="navbar-brand" routerLink="/">
+            LOGO
+          </a>
+        </div>
+
+        <div *ngIf=" params == 'signin'">
+   
+              <form [formGroup]="signinForm" (ngSubmit)="SignupSigninForm()" autocomplete="off">
+          <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="loginEmail" formControlName="email"/>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="loginPassword" formControlName="password"/>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary" [disabled]="!signinForm.valid">Login</button>
+            </div>
+      </form>
+  
+        <hr>
+        <div>
+          <p>Don't have an account? <span><a href="/signup">Sign Up</a></span> </p>
+        </div>
+          </div>
+  
+          <div *ngIf="params == 'signup'">
+        
+            <form [formGroup]="signupForm" (ngSubmit)="SignupSigninForm()" autocomplete="off">
+              <div class="mb-3">
+                  <label for="signupName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="signupName" formControlName="name">
+                </div>
+              <div class="mb-3">
+                  <label for="signupEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="signupEmail" formControlName="email">
+                </div>
+                <div class="mb-3">
+                  <label for="signupPassword" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="signupPassword" formControlName="password">
+                </div>
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">Sign Up</button>
+                </div>
+            </form>
+  
+          <hr>
+          <div>
+            <p>Already have an account? <span><a href="/signin">Login</a></span> </p>
+          </div>
+            </div> 
+      </div>
+    </div>
+  </div>
+</div>
+

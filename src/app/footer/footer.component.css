@@ -1,0 +1,9 @@
+.navbar{
+    background-color: var(--theme-default-white);
+}
+.nav-link{
+    color: var(--theme-black);
+}
+.active{
+    color: var(--theme-voilet);
+}

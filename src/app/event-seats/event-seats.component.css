@@ -1,0 +1,53 @@
+.seat-heading{
+    font-size: 15px;
+    color: var(--theme-dark-grey);
+}
+/* .d-grid{
+    grid-template-columns: repeat(auto-fill,25px);
+    grid-gap: 2px;
+} */
+
+.grid-seat{
+    grid-template-columns: repeat(auto-fill,20px);
+    grid-gap: 2px;
+}
+.row-alphabet{
+    margin-right: 20px;
+}
+.seat{
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.available{
+    background-color: var(--theme-default-white);
+    color: var(--theme-voilet);
+    border: 1px solid var(--theme-voilet);
+    cursor: pointer;
+}
+
+.selected{
+    background-color: var(--theme-voilet);
+    color: var(--theme-default-white);
+    border: 1px solid var(--theme-voilet);
+    cursor: pointer;
+}
+
+.occupied{
+    background-color: var(--theme-grey);
+    color: var(--theme-default-white);
+    border: 1px solid var(--theme-grey);
+    user-select: none;
+}
+
+.hide{
+    visibility: hidden;
+}
+
+.btn-pay{
+    width: 200px;
+}
